@@ -1,0 +1,17 @@
+<h1>Most Dangerous Day</h1>
+
+<section id="date-range">
+  <p><%= @start_date %> - <%= @end_date %></p>
+</section>
+
+<section id="most_dangerous_day">
+  <%= facade.most_dangerous_day %>
+</section>
+<section id="asteroids">
+  <% facade.asteroids.each do |asteroid| %>
+    <ul class="asteroid">
+      <p>Name: <%= asteroid.name %></p>
+      <p>NEO Reference ID: <%= asteroid.neo_reference_id %></p>
+    </ul>
+  <% end %>
+</section>
